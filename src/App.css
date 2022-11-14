@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+:root {
+  --primaryFont: 'Inter', sans-serif;
+  --transition: all 0.3s linear;
+  --blackColor: #000000;
+  --whiteColor: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: var(--primaryFont);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*
+==============
+Hero section
+==============
+*/
+.hero-section {
+  background: url('../src/assets/images/Palmtree.gif') center/cover no-repeat fixed;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+
+  min-height: 100vh;
+  min-width: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero-link {
+  color: var(--whiteColor);
+  font-size: 4rem;
+  font-weight: bold;
 }
