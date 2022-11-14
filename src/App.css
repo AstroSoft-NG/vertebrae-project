@@ -9,7 +9,10 @@ html {
   --primaryFont: 'Inter', sans-serif;
   --transition: all 0.3s linear;
   --blackColor: #000000;
+  --lightBlack: #010101;
   --whiteColor: #fff;
+  --borderColor: #d9d9d9;
+  --radius: 0.25rem;
 }
 
 * {
@@ -40,4 +43,106 @@ Hero section
   color: var(--whiteColor);
   font-size: 4rem;
   font-weight: bold;
+}
+
+/*
+================
+Products Page
+================
+*/
+.products-menu {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.products-logo-box {
+  margin-top: 1.5rem;
+}
+.products-logo-box img {
+  width: 150px;
+}
+.page-title {
+  margin-top: 1rem;
+}
+.products-info {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+.person-icon {
+  width: 28px;
+}
+.cart-details-container {
+  margin-top: -1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-icon {
+  cursor: pointer;
+}
+.cart-number {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--blackColor);
+}
+
+.cart-number h3 {
+  color: var(--whiteColor);
+}
+
+.products-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item-card {
+  min-width: 300px;
+  padding: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--borderColor);
+  margin-block: 1rem;
+}
+.item-card img {
+  width: 100%;
+  align-items: center;
+}
+
+.item-details {
+  background: var(--lightBlack);
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.item-details h4,
+.item-details h3 {
+  color: var(--whiteColor);
+}
+.items-details h3 {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .products-container {
+    display: grid;
+    grid-template-columns: minmax(300px, 400px) minmax(300px, 400px);
+    justify-content: center;
+    gap: 1rem;
+  }
+  .item-card {
+    max-width: 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .products-container {
+    grid-template-columns: repeat(3, minmax(250px, 350px));
+  }
 }
