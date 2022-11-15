@@ -104,6 +104,7 @@ Products Page
 }
 .item-card {
   min-width: 300px;
+  cursor: pointer;
   padding: 1rem;
   border-radius: var(--radius);
   border: 1px solid var(--borderColor);
@@ -145,4 +146,18 @@ Products Page
   .products-container {
     grid-template-columns: repeat(3, minmax(250px, 350px));
   }
+}
+
+.products-footer {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: var(--blackColor);
+}
+.footer-link img {
+  width: 110px;
 }
