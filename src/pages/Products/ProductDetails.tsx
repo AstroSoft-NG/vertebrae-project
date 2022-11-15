@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 
 import Menu from '../../components/Menu';
-import AddToCartButton from '../../components/AddToCartButton';
+import Button from '../../components/Button';
 import Footer from '../../components/Footer';
 const ProductDetails = () => {
   const location = useLocation();
@@ -40,7 +40,7 @@ const ProductDetails = () => {
               <option value='L'>XXL</option>
             </select>
           </div>
-          <AddToCartButton />
+          <Button text='Add to Cart' />
         </article>
       </section>
       <div className='product-details-footer'>

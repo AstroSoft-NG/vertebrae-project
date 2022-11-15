@@ -5,7 +5,7 @@ import whiteLogo from '../assets/images/white-logo.png';
 const Home = () => {
   return (
     <section className='hero-section'>
-      <Link className='hero-link' to='/products' target='_blank' rel='noopener noreferrer'>
+      <Link className='hero-link' to='/products'>
         <img src={whiteLogo} alt='Hero Logo' />
       </Link>
     </section>

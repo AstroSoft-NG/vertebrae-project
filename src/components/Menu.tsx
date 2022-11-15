@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import productsLogo from '../assets/images/logo.png';
 import personIcon from '../assets/images/person-icon.png';
 import cartIcon from '../assets/images/cart-icon.png';
@@ -11,9 +13,9 @@ const Menu = () => {
         <h1>Products</h1>
       </article>
       <article className='products-info'>
-        <div>
+        <Link to='/signup'>
           <img src={personIcon} alt='Person Icon' className='person-icon' />
-        </div>
+        </Link>
         <div className='cart-details-container'>
           <div className='cart-number'>
             <h3>0</h3>
