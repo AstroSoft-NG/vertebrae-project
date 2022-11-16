@@ -1,17 +1,20 @@
-import React from 'react';
-
+import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 
+import { AppContext } from '../../appContext/AppContext';
 import Menu from '../../components/Menu';
 import Button from '../../components/Button';
 import Footer from '../../components/Footer';
+import Cart from '../../components/Cart';
 const ProductDetails = () => {
   const location = useLocation();
+  const { isCartOpen, handleAddToCart } = useContext(AppContext);
 
   const { image, name, price } = location.state.product;
   return (
     <div>
       <Menu pageTitle='Products' />
+      {isCartOpen && <Cart />}
       <section className='item-details-container'>
         <article className='single-item-img'>
           <div className='item-card'>

@@ -1,12 +1,16 @@
-import React from 'react';
+import { useContext } from 'react';
 
 import Menu from '../../components/Menu';
 import Footer from '../../components/Footer';
+import Cart from '../../components/Cart';
+import { AppContext } from '../../appContext/AppContext';
 
 const PrivacyPolicy = () => {
+  const { isCartOpen } = useContext(AppContext);
   return (
     <div>
       <Menu pageTitle='' />
+      {isCartOpen && <Cart />}
       <section className='info-section'>
         <h2 className='privacy-header'>Privacy Policy</h2>
         <h4 className='privacy-date'>Effective date:June 23 2019</h4>

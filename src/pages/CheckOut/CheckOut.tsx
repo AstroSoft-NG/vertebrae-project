@@ -1,11 +1,14 @@
-import React from 'react';
+import { useContext } from 'react';
 import { useFormik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 
 import Menu from '../../components/Menu';
 import Footer from '../../components/Footer';
+import { AppContext } from '../../appContext/AppContext';
+import Cart from '../../components/Cart';
 
 const CheckOut = () => {
+  const { isCartOpen } = useContext(AppContext);
   const navigate = useNavigate();
   const handleCheckOutFinal = () => {
     navigate('/checkoutfinal');
@@ -36,6 +39,7 @@ const CheckOut = () => {
   return (
     <div>
       <Menu pageTitle='Products' />
+      {isCartOpen && <Cart />}
       <section className='checkout-details'>
         <div className='process-indicator'>1/2</div>
         <h2 className='checkout-header'>Contact Info</h2>

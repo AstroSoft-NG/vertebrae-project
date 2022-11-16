@@ -1,9 +1,15 @@
+import { useContext } from 'react';
+
 import Menu from '../../components/Menu';
 import Footer from '../../components/Footer';
+import Cart from '../../components/Cart';
+import { AppContext } from '../../appContext/AppContext';
 const Info = () => {
+  const { isCartOpen } = useContext(AppContext);
   return (
     <div>
       <Menu pageTitle='' />
+      {isCartOpen && <Cart />}
       <section className='info-section'>
         <h2>Info Page</h2>
         <article className='single-info-item'>

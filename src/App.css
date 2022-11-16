@@ -451,3 +451,75 @@ Info Page
 .checkout-final-field {
   margin-bottom: 3rem;
 }
+
+/*
+==============
+Cart Component
+==============
+*/
+.cart-container {
+  padding-inline: 1.5rem;
+  right: 0;
+  z-index: 2;
+  transition: var(--transition);
+  width: 450px;
+  min-height: 100vh;
+  margin-right: -400px;
+}
+.cart-header {
+  padding-top: 1rem;
+}
+.cart-product {
+  width: 100%;
+
+  margin-block: 1.5rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-around;
+  align-items: center;
+}
+.cart-product-name {
+  margin-bottom: 1rem;
+}
+.cart-product img {
+  width: 70px;
+  height: 70px;
+}
+.cart-open {
+  margin-right: 0;
+}
+
+.cart-buttons {
+  display: flex;
+  justify-content: 1rem;
+  border: 2px solid var(--inputBgColor);
+}
+.cart-buttons p {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--whiteColor);
+}
+
+.cart-btn {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.amount-container {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  margin-inline: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-checkout-btn {
+  width: 100%;
+  margin-top: 1.5rem;
+}

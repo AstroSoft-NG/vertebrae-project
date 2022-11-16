@@ -1,9 +1,12 @@
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
 
 import Footer from '../../components/Footer';
+import Cart from '../../components/Cart';
 import Menu from '../../components/Menu';
 import cartItem from '../../assets/images/cart-item.png';
 import { ProductType } from '../../services/models';
+import { AppContext } from '../../appContext/AppContext';
 const products: ProductType[] = [
   { id: 1, image: cartItem, name: 'plain Tree', price: 25 },
   {
@@ -25,9 +28,11 @@ const Products = () => {
   const handleProductDetails = (name: string, product: ProductType) => {
     navigate(`/products/${name}`, { state: { product } });
   };
+  const { isCartOpen } = useContext(AppContext);
   return (
     <div>
       <Menu pageTitle='Products' />
+      {isCartOpen && <Cart />}
       <section className='products-container'>
         {products.map(({ id, image, name, price }) => (
           <article

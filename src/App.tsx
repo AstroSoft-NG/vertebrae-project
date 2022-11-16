@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 
-import { AppContextProvider } from './context/AppContext';
+import { AppContextProvider } from './appContext/AppContext';
 import SignUP from './pages/SignUp/SignUP';
 import LogIn from './pages/LogIn/LogIn';
 import Home from './pages/Home/Home';

@@ -1,13 +1,13 @@
-import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { useFormik } from 'formik';
 
-import eyeIcon from '../../assets/images/eye-icon.png';
 import Footer from '../../components/Footer';
 import Menu from '../../components/Menu';
-import { FormValuesType } from '../../services/models';
-
+import Cart from '../../components/Cart';
+import { AppContext } from '../../appContext/AppContext';
 const SignUP = () => {
+  const { isCartOpen } = useContext(AppContext);
   const formik = useFormik({
     initialValues: { firstName: '', lastName: '', email: '', password: '' },
     onSubmit: (values) => {
@@ -34,6 +34,7 @@ const SignUP = () => {
   return (
     <>
       <Menu pageTitle='Products' />
+      {isCartOpen && <Cart />}
       <section className='signup-page-form'>
         <h2>Sign UP</h2>
         <form onSubmit={formik.handleSubmit} className='signup-form'>

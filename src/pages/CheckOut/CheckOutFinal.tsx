@@ -1,11 +1,14 @@
-import React from 'react';
+import { useContext } from 'react';
 import { useFormik } from 'formik';
 
 import Menu from '../../components/Menu';
 import Footer from '../../components/Footer';
 import { FormValuesType } from '../../services/models';
+import { AppContext } from '../../appContext/AppContext';
+import Cart from '../../components/Cart';
 
 const CheckOutFinal = () => {
+  const { isCartOpen } = useContext(AppContext);
   const formik = useFormik({
     initialValues: { email: '' },
     onSubmit: (values) => {
@@ -24,6 +27,7 @@ const CheckOutFinal = () => {
   return (
     <div>
       <Menu pageTitle='Products' />
+      {isCartOpen && <Cart />}
       <div className='process-indicator process-indicator-2'>2/2</div>
       <section className='checkout-final-details'>
         <h2>Payment</h2>

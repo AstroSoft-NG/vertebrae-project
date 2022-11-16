@@ -5,9 +5,9 @@ import productsLogo from '../assets/images/image 1.png';
 import personIcon from '../assets/images/person-icon.png';
 import cartIcon from '../assets/images/cart-icon.png';
 import { MenuProps } from '../services/models';
-import { AppContext } from '../context/AppContext';
+import { AppContext } from '../appContext/AppContext';
 const Menu: React.FC<MenuProps> = ({ pageTitle }) => {
-  const { count } = useContext(AppContext);
+  const { count, handleOpenCart } = useContext(AppContext);
   return (
     <main className='products-menu'>
       <article className='products-logo-box'>
@@ -22,7 +22,7 @@ const Menu: React.FC<MenuProps> = ({ pageTitle }) => {
         <Link to='/signup'>
           <img src={personIcon} alt='Person Icon' className='person-icon' />
         </Link>
-        <div className='cart-details-container'>
+        <div className='cart-details-container' onClick={handleOpenCart}>
           <div className='cart-number'>
             <h3>{count}</h3>
           </div>

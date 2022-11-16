@@ -17,6 +17,9 @@ export interface MenuProps {
   pageTitle: string;
 }
 
+export interface itemNumberType {
+  itemNumber: number;
+}
 export interface AppContextType {
   count: number;
   handleAddCount: () => void;
