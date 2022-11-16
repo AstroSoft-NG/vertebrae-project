@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 
+import { AppContextProvider } from './context/AppContext';
 import SignUP from './pages/SignUp/SignUP';
 import LogIn from './pages/LogIn/LogIn';
 import Home from './pages/Home/Home';
@@ -16,20 +17,22 @@ import CheckOutFinal from './pages/CheckOut/CheckOutFinal';
 
 function App() {
   return (
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/products' element={<Products />} />
-      <Route path='/products/:name' element={<ProductDetails />}></Route>
-      <Route path='/signup' element={<SignUP />}></Route>
-      <Route path='/login' element={<LogIn />}></Route>
-      <Route path='/accountrecovery' element={<AccountRecovery />}></Route>
-      <Route path='/recoveryconfirmation' element={<RecoveryComfirmation />}></Route>
-      <Route path='/finalrecovery' element={<FinalRecoveryPage />}></Route>
-      <Route path='/info' element={<Info />}></Route>
-      <Route path='/privacypolicy' element={<PrivacyPolicy />}></Route>
-      <Route path='/checkout' element={<CheckOut />}></Route>
-      <Route path='/checkoutfinal' element={<CheckOutFinal />}></Route>
-    </Routes>
+    <AppContextProvider>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/products' element={<Products />} />
+        <Route path='/products/:name' element={<ProductDetails />}></Route>
+        <Route path='/signup' element={<SignUP />}></Route>
+        <Route path='/login' element={<LogIn />}></Route>
+        <Route path='/accountrecovery' element={<AccountRecovery />}></Route>
+        <Route path='/recoveryconfirmation' element={<RecoveryComfirmation />}></Route>
+        <Route path='/finalrecovery' element={<FinalRecoveryPage />}></Route>
+        <Route path='/info' element={<Info />}></Route>
+        <Route path='/privacypolicy' element={<PrivacyPolicy />}></Route>
+        <Route path='/checkout' element={<CheckOut />}></Route>
+        <Route path='/checkoutfinal' element={<CheckOutFinal />}></Route>
+      </Routes>
+    </AppContextProvider>
   );
 }
 

@@ -16,3 +16,15 @@ export interface ButtonProps {
 export interface MenuProps {
   pageTitle: string;
 }
+
+export interface AppContextType {
+  count: number;
+  handleAddCount: () => void;
+  isCartOpen: boolean;
+  cartItems: ProductType[];
+  handleAddToCart: (workshop: ProductType) => void;
+  handleOpenCart: () => void;
+}
+export interface ProviderType {
+  children: React.ReactNode;
+}

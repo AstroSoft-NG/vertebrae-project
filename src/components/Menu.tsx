@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
 
 import productsLogo from '../assets/images/image 1.png';
 import personIcon from '../assets/images/person-icon.png';
 import cartIcon from '../assets/images/cart-icon.png';
 import { MenuProps } from '../services/models';
+import { AppContext } from '../context/AppContext';
 const Menu: React.FC<MenuProps> = ({ pageTitle }) => {
+  const { count } = useContext(AppContext);
   return (
     <main className='products-menu'>
       <article className='products-logo-box'>
@@ -21,7 +24,7 @@ const Menu: React.FC<MenuProps> = ({ pageTitle }) => {
         </Link>
         <div className='cart-details-container'>
           <div className='cart-number'>
-            <h3>0</h3>
+            <h3>{count}</h3>
           </div>
           <img src={cartIcon} alt='cart Icon' className='cart-icon' />
         </div>
