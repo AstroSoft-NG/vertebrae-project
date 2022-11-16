@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useLocation } from 'react-router-dom';
 
 import Menu from '../../components/Menu';
@@ -6,6 +7,7 @@ import Button from '../../components/Button';
 import Footer from '../../components/Footer';
 const ProductDetails = () => {
   const location = useLocation();
+
   const { image, name, price } = location.state.product;
   return (
     <div>

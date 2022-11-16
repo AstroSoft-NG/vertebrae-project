@@ -8,3 +8,7 @@ export interface ProductType {
 export interface FormValuesType {
   [key: string]: any;
 }
+
+export interface ButtonProps {
+  text: string;
+}

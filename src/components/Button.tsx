@@ -1,12 +1,17 @@
 import React from 'react';
-interface ButtonProps {
-  text: string;
-}
+import { useNavigate } from 'react-router-dom';
 
+import { ButtonProps } from '../services/models';
 const AddToCartButton: React.FC<ButtonProps> = ({ text }) => {
+  const navigate = useNavigate();
+  const handleCheckOut = () => {
+    navigate('/checkout');
+  };
   return (
     <div className='add-btn'>
-      <button type='button'>{text}</button>
+      <button type='button' onClick={handleCheckOut}>
+        {text}
+      </button>
     </div>
   );
 };

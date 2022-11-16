@@ -11,6 +11,8 @@ import RecoveryComfirmation from './pages/AccountRecovery/RecoveryComfirmation';
 import FinalRecoveryPage from './pages/AccountRecovery/FinalRecoveryPage';
 import Info from './pages/Info/Info';
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
+import CheckOut from './pages/CheckOut/CheckOut';
+import CheckOutFinal from './pages/CheckOut/CheckOutFinal';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
       <Route path='/finalrecovery' element={<FinalRecoveryPage />}></Route>
       <Route path='/info' element={<Info />}></Route>
       <Route path='/privacypolicy' element={<PrivacyPolicy />}></Route>
+      <Route path='/checkout' element={<CheckOut />}></Route>
+      <Route path='/checkoutfinal' element={<CheckOutFinal />}></Route>
     </Routes>
   );
 }

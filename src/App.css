@@ -398,3 +398,42 @@ Info Page
 .privacy-date {
   margin-bottom: 1rem;
 }
+
+/*Checkout Page*/
+.checkout-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.process-indicator {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-left: 4px solid var(--blackColor);
+  border-right: 4px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkout-header {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.address {
+  width: 100%;
+  background: var(--inputBgColor);
+  padding: 1.5rem;
+  border: none;
+  outline: none;
+}
+.save-text {
+  margin-block: 1rem;
+}
+
+/*Checkout final Page*/
+.checkout-final-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
