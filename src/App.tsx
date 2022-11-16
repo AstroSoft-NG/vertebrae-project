@@ -10,6 +10,7 @@ import AccountRecovery from './pages/AccountRecovery/AccountRecovery';
 import RecoveryComfirmation from './pages/AccountRecovery/RecoveryComfirmation';
 import FinalRecoveryPage from './pages/AccountRecovery/FinalRecoveryPage';
 import Info from './pages/Info/Info';
+import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Route path='/recoveryconfirmation' element={<RecoveryComfirmation />}></Route>
       <Route path='/finalrecovery' element={<FinalRecoveryPage />}></Route>
       <Route path='/info' element={<Info />}></Route>
+      <Route path='/privacypolicy' element={<PrivacyPolicy />}></Route>
     </Routes>
   );
 }

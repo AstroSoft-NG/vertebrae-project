@@ -389,3 +389,12 @@ Info Page
     max-width: 80%;
   }
 }
+
+/*Privacy Policy*/
+.privacy-header {
+  margin-block: 1rem;
+}
+
+.privacy-date {
+  margin-bottom: 1rem;
+}

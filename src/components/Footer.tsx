@@ -4,7 +4,7 @@ import productsLogo from '../assets/images/image 1.png';
 const Footer = () => {
   return (
     <footer className='products-footer'>
-      <Link to='' className='footer-link'>
+      <Link to='/privacypolicy' className='footer-link'>
         Privacy Policy
       </Link>
       <Link to='' className='footer-link'>
