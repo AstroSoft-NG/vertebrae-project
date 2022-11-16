@@ -10,7 +10,7 @@ const Footer = () => {
       <Link to='' className='footer-link'>
         Terms and Conditions
       </Link>
-      <Link to='' className='footer-link'>
+      <Link to='/info' className='footer-link'>
         Info
       </Link>
       <Link to='/' className='footer-link'>

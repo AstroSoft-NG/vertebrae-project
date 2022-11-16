@@ -9,6 +9,7 @@ import ProductDetails from './pages/Products/ProductDetails';
 import AccountRecovery from './pages/AccountRecovery/AccountRecovery';
 import RecoveryComfirmation from './pages/AccountRecovery/RecoveryComfirmation';
 import FinalRecoveryPage from './pages/AccountRecovery/FinalRecoveryPage';
+import Info from './pages/Info/Info';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path='/accountrecovery' element={<AccountRecovery />}></Route>
       <Route path='/recoveryconfirmation' element={<RecoveryComfirmation />}></Route>
       <Route path='/finalrecovery' element={<FinalRecoveryPage />}></Route>
+      <Route path='/info' element={<Info />}></Route>
     </Routes>
   );
 }
