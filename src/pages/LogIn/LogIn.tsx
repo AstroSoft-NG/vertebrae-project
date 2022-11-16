@@ -26,7 +26,7 @@ const LogIn = () => {
   });
   return (
     <>
-      <Menu />
+      <Menu pageTitle='' />
       <section className='signup-page-form'>
         <h2>Login</h2>
         <form onSubmit={formik.handleSubmit} className='signup-form'>

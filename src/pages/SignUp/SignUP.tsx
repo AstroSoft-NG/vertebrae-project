@@ -33,7 +33,7 @@ const SignUP = () => {
   });
   return (
     <>
-      <Menu />
+      <Menu pageTitle='Products' />
       <section className='signup-page-form'>
         <h2>Sign UP</h2>
         <form onSubmit={formik.handleSubmit} className='signup-form'>

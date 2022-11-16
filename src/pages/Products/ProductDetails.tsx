@@ -11,7 +11,7 @@ const ProductDetails = () => {
   const { image, name, price } = location.state.product;
   return (
     <div>
-      <Menu />
+      <Menu pageTitle='Products' />
       <section className='item-details-container'>
         <article className='single-item-img'>
           <div className='item-card'>

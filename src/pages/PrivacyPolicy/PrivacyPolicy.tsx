@@ -6,7 +6,7 @@ import Footer from '../../components/Footer';
 const PrivacyPolicy = () => {
   return (
     <div>
-      <Menu />
+      <Menu pageTitle='' />
       <section className='info-section'>
         <h2 className='privacy-header'>Privacy Policy</h2>
         <h4 className='privacy-date'>Effective date:June 23 2019</h4>

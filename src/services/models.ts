@@ -12,3 +12,7 @@ export interface FormValuesType {
 export interface ButtonProps {
   text: string;
 }
+
+export interface MenuProps {
+  pageTitle: string;
+}

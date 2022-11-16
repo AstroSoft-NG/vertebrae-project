@@ -35,7 +35,7 @@ const CheckOut = () => {
   });
   return (
     <div>
-      <Menu />
+      <Menu pageTitle='Products' />
       <section className='checkout-details'>
         <div className='process-indicator'>1/2</div>
         <h2 className='checkout-header'>Contact Info</h2>

@@ -23,7 +23,8 @@ const CheckOutFinal = () => {
   });
   return (
     <div>
-      <Menu />
+      <Menu pageTitle='Products' />
+      <div className='process-indicator process-indicator-2'>2/2</div>
       <section className='checkout-final-details'>
         <h2>Payment</h2>
         <form className='signup-form'>
@@ -36,7 +37,7 @@ const CheckOutFinal = () => {
             </div>
           </div>
           <div className='username-container'>
-            <div className='username '>
+            <div className='username checkout-final-field'>
               <label>Cvv</label>
               <br />
               <input
@@ -53,7 +54,7 @@ const CheckOutFinal = () => {
                 </p>
               </div>
             </div>
-            <div className='username'>
+            <div className='username checkout-final-field'>
               <label>Expiry Date</label>
               <br />
               <input
@@ -70,7 +71,7 @@ const CheckOutFinal = () => {
             </div>
           </div>
           <button type='submit' className='signup-submit'>
-            Sign in
+            Purchase
           </button>
         </form>
       </section>

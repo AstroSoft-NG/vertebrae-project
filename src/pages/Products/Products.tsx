@@ -27,7 +27,7 @@ const Products = () => {
   };
   return (
     <div>
-      <Menu />
+      <Menu pageTitle='Products' />
       <section className='products-container'>
         {products.map(({ id, image, name, price }) => (
           <article

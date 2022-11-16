@@ -24,7 +24,7 @@ const AccountRecovery = () => {
   });
   return (
     <>
-      <Menu />
+      <Menu pageTitle='' />
       <section className='signup-page-form'>
         <article className='recovery-page-header'>
           <h2>Account Recovery</h2>

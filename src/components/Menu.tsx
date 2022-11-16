@@ -3,14 +3,17 @@ import { Link } from 'react-router-dom';
 import productsLogo from '../assets/images/image 1.png';
 import personIcon from '../assets/images/person-icon.png';
 import cartIcon from '../assets/images/cart-icon.png';
-const Menu = () => {
+import { MenuProps } from '../services/models';
+const Menu: React.FC<MenuProps> = ({ pageTitle }) => {
   return (
     <main className='products-menu'>
       <article className='products-logo-box'>
         <img src={productsLogo} alt='products Logo' />
       </article>
       <article className='page-title'>
-        <h1>Products</h1>
+        <Link to='/products' className='products-link'>
+          {pageTitle}
+        </Link>
       </article>
       <article className='products-info'>
         <Link to='/signup'>

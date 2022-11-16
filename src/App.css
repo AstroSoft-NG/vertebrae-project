@@ -93,6 +93,10 @@ Products Page
 .page-title {
   margin-top: 1rem;
 }
+.products-link {
+  color: var(--blackColor);
+  font-size: 1.2rem;
+}
 .products-info {
   margin-top: 2rem;
   display: flex;
@@ -401,6 +405,7 @@ Info Page
 
 /*Checkout Page*/
 .checkout-details {
+  padding-inline: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -408,6 +413,7 @@ Info Page
 .process-indicator {
   width: 50px;
   height: 50px;
+  align-self: flex-start;
   border-radius: 50%;
   border-left: 4px solid var(--blackColor);
   border-right: 4px solid grey;
@@ -436,4 +442,12 @@ Info Page
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.process-indicator-2 {
+  margin-left: 5rem;
+  border: 4px solid var(--blackColor);
+}
+
+.checkout-final-field {
+  margin-bottom: 3rem;
 }

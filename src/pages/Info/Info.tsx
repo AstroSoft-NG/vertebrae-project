@@ -3,7 +3,7 @@ import Footer from '../../components/Footer';
 const Info = () => {
   return (
     <div>
-      <Menu />
+      <Menu pageTitle='' />
       <section className='info-section'>
         <h2>Info Page</h2>
         <article className='single-info-item'>
