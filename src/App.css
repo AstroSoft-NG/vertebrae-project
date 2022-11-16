@@ -2,8 +2,6 @@
 
 html {
   scroll-behavior: smooth;
-  width: 100%;
-  overflow-x: hidden;
 }
 :root {
   --primaryFont: 'Inter', sans-serif;
@@ -12,7 +10,8 @@ html {
   --blackColor: #000000;
   --lightBlack: #010101;
   --whiteColor: #fff;
-  --borderColor: #d9d9d9;
+  --borderColor: #403a3a;
+  --inputBgColor: #fafafa;
   --radius: 0.25rem;
 }
 
@@ -24,6 +23,8 @@ html {
 
 body {
   font-family: var(--primaryFont);
+  width: 100%;
+  overflow-x: hidden;
 }
 
 select {
@@ -64,6 +65,7 @@ Hero section
   font-size: 1rem;
   border: none;
   color: var(--whiteColor);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 900px) {
@@ -121,6 +123,18 @@ Products Page
 
 .cart-number h3 {
   color: var(--whiteColor);
+}
+
+@media screen and (max-width: 500px) {
+  .cart-details-container {
+    margin-right: 2rem;
+  }
+  .products-logo-box img {
+    width: 100px;
+  }
+  .footer-link img {
+    width: 700px;
+  }
 }
 
 .products-container {
@@ -187,6 +201,13 @@ Products Page
 .footer-link img {
   width: 110px;
 }
+
+@media screen and (max-width: 500px) {
+  .products-footer {
+    justify-content: center;
+  }
+}
+
 /* Product Details Page*/
 .item-details-container {
   margin-top: 1rem;
@@ -247,4 +268,100 @@ Products Page
   .single-item-details {
     width: 350px;
   }
+}
+
+/*
+==============
+Signup Page
+==============
+*/
+
+.signup-page-form {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.username-container {
+  display: flex;
+  justify-content: space-between;
+}
+.signup-form {
+  width: 420px;
+}
+
+.field {
+  margin-block: 2rem;
+}
+.username input,
+.field input {
+  height: 46px;
+  width: 200px;
+  background: var(--inputBgColor);
+  padding: 1rem;
+  outline: none;
+  border: 1px solid var(--inputBgColor);
+}
+label {
+  color: var(--blackColor);
+  margin-bottom: 0.3rem;
+}
+.field input {
+  width: 100%;
+}
+
+.product-link,
+.signin-link {
+  margin-top: 1rem;
+  color: var(--blackColor);
+  font-weight: bold;
+  transition: var(--transition);
+}
+.product-link:hover,
+.signin-link:hover {
+  color: #424542;
+}
+.signup-submit {
+  background: var(--blackColor);
+  width: 100%;
+  height: 46px;
+  font-size: 1rem;
+  border: none;
+  color: var(--whiteColor);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .username-container {
+    flex-direction: column;
+  }
+  .username {
+    margin-top: 1rem;
+  }
+  .username input {
+    width: 100%;
+    height: 46px;
+  }
+  .signup-form {
+    width: 350px;
+    align-items: flex-start;
+    padding-inline: 1rem;
+  }
+
+  .field iput {
+    width: 100%;
+  }
+}
+
+/*
+==================
+Recovery Page Header
+==================
+*/
+.recovery-page-header {
+  display: flex;
+  flex-direction: center;
+  align-items: center;
 }

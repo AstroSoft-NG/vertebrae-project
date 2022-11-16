@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import whiteLogo from '../assets/images/white-logo.png';
+import whiteLogo from '../../assets/images/logo.png';
 
 const Home = () => {
   return (

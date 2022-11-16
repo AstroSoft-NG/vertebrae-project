@@ -35,7 +35,7 @@ const Products = () => {
             key={id}
             onClick={() => handleProductDetails(name, { id, image, name, price })}
           >
-            <img src={image} alt={`${name} image`} />
+            <img src={image} alt='' />
             <div className='item-details'>
               <h4>{name}</h4>
               <h3>$ {price}</h3>

@@ -6,14 +6,14 @@ import Button from '../../components/Button';
 import Footer from '../../components/Footer';
 const ProductDetails = () => {
   const location = useLocation();
-  const { id, image, name, price } = location.state.product;
+  const { image, name, price } = location.state.product;
   return (
     <div>
       <Menu />
       <section className='item-details-container'>
         <article className='single-item-img'>
           <div className='item-card'>
-            <img src={image} alt={`${name} image`} />
+            <img src={image} alt='' />
           </div>
           <div className='details-page-boxes'>
             <div></div>

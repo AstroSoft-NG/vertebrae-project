@@ -4,3 +4,7 @@ export interface ProductType {
   name: string;
   price: number;
 }
+
+export interface FormValuesType {
+  [key: string]: any;
+}

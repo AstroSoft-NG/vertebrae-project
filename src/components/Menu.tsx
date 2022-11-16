@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import productsLogo from '../assets/images/logo.png';
+import productsLogo from '../assets/images/image 1.png';
 import personIcon from '../assets/images/person-icon.png';
 import cartIcon from '../assets/images/cart-icon.png';
 const Menu = () => {

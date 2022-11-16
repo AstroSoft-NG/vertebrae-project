@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import productsLogo from '../assets/images/logo.png';
+import productsLogo from '../assets/images/image 1.png';
 const Footer = () => {
   return (
     <footer className='products-footer'>
