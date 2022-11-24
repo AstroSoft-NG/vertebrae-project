@@ -1,29 +1,14 @@
 import { useContext } from 'react';
-import { useFormik } from 'formik';
 
 import Menu from '../../components/Menu';
 import Footer from '../../components/Footer';
-import { FormValuesType } from '../../services/models';
+
 import { AppContext } from '../../appContext/AppContext';
 import Cart from '../../components/Cart';
 
 const CheckOutFinal = () => {
   const { isCartOpen } = useContext(AppContext);
-  const formik = useFormik({
-    initialValues: { email: '' },
-    onSubmit: (values) => {
-      console.log('Submitted ', values);
-    },
-    validate: (values) => {
-      const errors: FormValuesType = {};
 
-      if (!values.email) {
-        errors.email = 'Email name is required';
-      }
-
-      return errors;
-    },
-  });
   return (
     <div>
       <Menu pageTitle='Products' />
@@ -44,33 +29,17 @@ const CheckOutFinal = () => {
             <div className='username checkout-final-field'>
               <label>Cvv</label>
               <br />
-              <input
-                type='text'
-                placeholder='David'
-                name='firstName'
-                //   value={formik.values.firstName}
-                //   onChange={formik.handleChange}
-                //   onBlur={formik.handleBlur}
-              ></input>
+              <input type='text' placeholder='David' name='firstName'></input>
               <div className='errors'>
-                <p>
-                  {/* {formik.values.firstName && formik.touched.firstName && formik.errors.firstName} */}
-                </p>
+                <p></p>
               </div>
             </div>
             <div className='username checkout-final-field'>
               <label>Expiry Date</label>
               <br />
-              <input
-                type='date'
-                placeholder='Ukperi'
-                name='expiryDate'
-                //   value={formik.values.}
-                //   onChange={formik.handleChange}
-                //   onBlur={formik.handleBlur}
-              ></input>
+              <input type='date' placeholder='Ukperi' name='expiryDate'></input>
               <div className='errors'>
-                {/* <p>{formik.values.lastName && formik.touched.lastName && formik.errors.lastName}</p> */}
+                <p></p>
               </div>
             </div>
           </div>
