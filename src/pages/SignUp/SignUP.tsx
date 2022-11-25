@@ -5,7 +5,8 @@ import Footer from '../../components/Footer';
 import Menu from '../../components/Menu';
 import Cart from '../../components/Cart';
 import { AppContext } from '../../appContext/AppContext';
-const SignUP = () => {
+
+const SignUP: React.FC = () => {
   const { isCartOpen } = useContext(AppContext);
 
   return (

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import cartProduct from '../assets/images/cart-item.png';
 import { AppContext } from '../appContext/AppContext';
 
-const Cart = () => {
+const Cart: React.FC = () => {
   const { isCartOpen } = useContext(AppContext);
   const navigate = useNavigate();
   const handleCheckoutPage = () => navigate('/checkout');

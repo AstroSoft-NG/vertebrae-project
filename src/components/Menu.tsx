@@ -6,6 +6,7 @@ import personIcon from '../assets/images/person-icon.png';
 import cartIcon from '../assets/images/cart-icon.png';
 import { MenuProps } from '../services/models';
 import { AppContext } from '../appContext/AppContext';
+
 const Menu: React.FC<MenuProps> = ({ pageTitle }) => {
   const { count, handleOpenCart } = useContext(AppContext);
   return (

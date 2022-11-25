@@ -1,7 +1,8 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import productsLogo from '../assets/images/image 1.png';
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className='products-footer'>
       <Link to='/privacypolicy' className='footer-link'>

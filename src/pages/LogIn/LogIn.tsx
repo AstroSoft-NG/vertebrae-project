@@ -6,7 +6,7 @@ import Menu from '../../components/Menu';
 import Cart from '../../components/Cart';
 import { AppContext } from '../../appContext/AppContext';
 
-const LogIn = () => {
+const LogIn: React.FC = () => {
   const { isCartOpen } = useContext(AppContext);
 
   return (

@@ -2,11 +2,10 @@ import { useContext } from 'react';
 
 import Menu from '../../components/Menu';
 import Footer from '../../components/Footer';
-
 import { AppContext } from '../../appContext/AppContext';
 import Cart from '../../components/Cart';
 
-const CheckOutFinal = () => {
+const CheckOutFinal: React.FC = () => {
   const { isCartOpen } = useContext(AppContext);
 
   return (

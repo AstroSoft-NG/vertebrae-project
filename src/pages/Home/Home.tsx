@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import whiteLogo from '../../assets/images/logo.png';
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <section className='hero-section'>
       <Link className='hero-link' to='/products'>

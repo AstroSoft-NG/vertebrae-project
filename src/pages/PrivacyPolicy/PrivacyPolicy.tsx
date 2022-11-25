@@ -5,7 +5,7 @@ import Footer from '../../components/Footer';
 import Cart from '../../components/Cart';
 import { AppContext } from '../../appContext/AppContext';
 
-const PrivacyPolicy = () => {
+const PrivacyPolicy:React.FC = () => {
   const { isCartOpen } = useContext(AppContext);
   return (
     <div>

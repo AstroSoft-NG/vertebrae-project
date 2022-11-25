@@ -1,7 +1,7 @@
 import Menu from '../../components/Menu';
 import Footer from '../../components/Footer';
 
-const FinalRecoveryPage = () => {
+const FinalRecoveryPage: React.FC = () => {
   return (
     <>
       <Menu pageTitle='' />

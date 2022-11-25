@@ -6,9 +6,10 @@ import Menu from '../../components/Menu';
 import Button from '../../components/Button';
 import Footer from '../../components/Footer';
 import Cart from '../../components/Cart';
-const ProductDetails = () => {
+
+const ProductDetails: React.FC = () => {
   const location = useLocation();
-  const { isCartOpen, handleAddToCart } = useContext(AppContext);
+  const { isCartOpen } = useContext(AppContext);
 
   const { image, name, price } = location.state.product;
   return (
@@ -29,7 +30,7 @@ const ProductDetails = () => {
         <article className='single-item-details'>
           <div className='single-item-header'>
             <h2>{name}</h2>
-            <h2>{price}</h2>
+            <h2>${price}</h2>
           </div>
           <div className='single-product-info'>
             <p>
@@ -54,5 +55,4 @@ const ProductDetails = () => {
     </div>
   );
 };
-
 export default ProductDetails;

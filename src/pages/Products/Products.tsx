@@ -23,7 +23,7 @@ const products: ProductType[] = [
   { id: 8, image: cartItem, name: 'plain Tree', price: 25 },
   { id: 9, image: cartItem, name: 'plain Tree', price: 25 },
 ];
-const Products = () => {
+const Products: React.FC = () => {
   const navigate = useNavigate();
   const handleProductDetails = (name: string, product: ProductType) => {
     navigate(`/products/${name}`, { state: { product } });
@@ -34,16 +34,16 @@ const Products = () => {
       <Menu pageTitle='Products' />
       {isCartOpen && <Cart />}
       <section className='products-container'>
-        {products.map(({ id, image, name, price }) => (
+        {products.map((product) => (
           <article
             className='item-card'
-            key={id}
-            onClick={() => handleProductDetails(name, { id, image, name, price })}
+            key={product.id}
+            onClick={() => handleProductDetails(product.name, product)}
           >
-            <img src={image} alt='' />
+            <img src={product.image} alt='' />
             <div className='item-details'>
-              <h4>{name}</h4>
-              <h3>$ {price}</h3>
+              <h4>{product.name}</h4>
+              <h3>$ {product.price}</h3>
             </div>
           </article>
         ))}

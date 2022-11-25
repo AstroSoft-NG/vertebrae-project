@@ -4,7 +4,8 @@ import Menu from '../../components/Menu';
 import Footer from '../../components/Footer';
 import Cart from '../../components/Cart';
 import { AppContext } from '../../appContext/AppContext';
-const Info = () => {
+
+const Info: React.FC = () => {
   const { isCartOpen } = useContext(AppContext);
   return (
     <div>

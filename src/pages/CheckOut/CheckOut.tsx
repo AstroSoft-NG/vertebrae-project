@@ -6,7 +6,7 @@ import Footer from '../../components/Footer';
 import { AppContext } from '../../appContext/AppContext';
 import Cart from '../../components/Cart';
 
-const CheckOut = () => {
+const CheckOut: React.FC = () => {
   const { isCartOpen } = useContext(AppContext);
   const navigate = useNavigate();
   const handleCheckOutFinal = () => {
