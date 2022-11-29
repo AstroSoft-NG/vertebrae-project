@@ -5,9 +5,21 @@ import cartProduct from '../assets/images/cart-item.png';
 import { AppContext } from '../appContext/AppContext';
 
 const Cart: React.FC = () => {
+  const [itemCount, setItemCount] = useState<number>(0);
   const { isCartOpen } = useContext(AppContext);
   const navigate = useNavigate();
   const handleCheckoutPage = () => navigate('/checkout');
+
+  const handleIncreaseItemCount = () => {
+    if (itemCount === 99) return;
+
+    setItemCount(itemCount + 1);
+  };
+  const handleDecreaseItemCount = () => {
+    if (itemCount !== 0 && itemCount > 0) {
+      setItemCount(itemCount - 1);
+    }
+  };
   return (
     <div className={`cart-container ${isCartOpen ? 'cart-open' : ''}`}>
       <h2 className='cart-header'>Cart</h2>
@@ -18,11 +30,11 @@ const Cart: React.FC = () => {
         <div>
           <h3 className='cart-product-name'>Plain Tea</h3>
           <div className='cart-buttons'>
-            <button type='button' className='cart-btn'>
+            <button type='button' className='cart-btn' onClick={handleDecreaseItemCount}>
               -
             </button>
-            <p>1</p>
-            <button type='button' className='cart-btn'>
+            <p>{itemCount}</p>
+            <button type='button' className='cart-btn' onClick={handleIncreaseItemCount}>
               +
             </button>
           </div>

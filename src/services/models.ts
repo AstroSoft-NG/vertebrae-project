@@ -11,6 +11,7 @@ export interface FormValuesType {
 
 export interface ButtonProps {
   text: string;
+  product: ProductType;
 }
 
 export interface MenuProps {

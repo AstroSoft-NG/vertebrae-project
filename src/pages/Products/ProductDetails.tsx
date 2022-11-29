@@ -46,7 +46,7 @@ const ProductDetails: React.FC = () => {
               <option value='L'>XXL</option>
             </select>
           </div>
-          <Button text='Add to Cart' />
+          <Button text='Add to Cart' product={location.state?.product} />
         </article>
       </section>
       <div className='product-details-footer'>

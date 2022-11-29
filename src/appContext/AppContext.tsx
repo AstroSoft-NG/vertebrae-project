@@ -10,7 +10,6 @@ export const AppContextProvider: React.FC<ProviderType> = ({ children }) => {
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
 
   const handleAddCount = () => setCount(count + 1);
-
   const handleOpenCart = () => setIsCartOpen(!isCartOpen);
 
   const handleAddToCart = (cartItem: ProductType) => {
@@ -21,6 +20,7 @@ export const AppContextProvider: React.FC<ProviderType> = ({ children }) => {
     } else {
       handleAddCount();
     }
+    console.log(cartItems);
   };
 
   return (
