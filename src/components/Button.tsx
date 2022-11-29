@@ -1,11 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { ButtonProps } from '../services/models';
 import { AppContext } from '../appContext/AppContext';
 const AddToCartButton: React.FC<ButtonProps> = ({ text, product }) => {
-  const { handleAddCount, handleAddToCart } = useContext(AppContext);
-
+  console.log(product);
+  const { handleAddCount, handleAddToCart, cartItems } = useContext(AppContext);
+  useEffect(() => {
+    console.log(cartItems);
+  }, []);
   return (
     <div className='add-btn'>
       <button

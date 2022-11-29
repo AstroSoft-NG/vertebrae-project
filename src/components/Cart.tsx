@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import cartProduct from '../assets/images/cart-item.png';
 import { AppContext } from '../appContext/AppContext';
 
 const Cart: React.FC = () => {
+  const { isCartOpen, cartItems } = useContext(AppContext);
+
   const [itemCount, setItemCount] = useState<number>(0);
-  const { isCartOpen } = useContext(AppContext);
   const navigate = useNavigate();
   const handleCheckoutPage = () => navigate('/checkout');
 
@@ -23,46 +23,29 @@ const Cart: React.FC = () => {
   return (
     <div className={`cart-container ${isCartOpen ? 'cart-open' : ''}`}>
       <h2 className='cart-header'>Cart</h2>
-      <article className='cart-product'>
-        <div>
-          <img src={cartProduct} alt='' />
-        </div>
-        <div>
-          <h3 className='cart-product-name'>Plain Tea</h3>
-          <div className='cart-buttons'>
-            <button type='button' className='cart-btn' onClick={handleDecreaseItemCount}>
-              -
-            </button>
-            <p>{itemCount}</p>
-            <button type='button' className='cart-btn' onClick={handleIncreaseItemCount}>
-              +
-            </button>
+      {cartItems.map((cartItem) => (
+        <article key={cartItem.id} className='cart-product'>
+          <div>
+            <img src={cartItem.image} alt='' />
           </div>
-        </div>
-        <div className='cart-product-price'>
-          <h3>$ 25</h3>
-        </div>
-      </article>
-      <article className='cart-product'>
-        <div>
-          <img src={cartProduct} alt='' />
-        </div>
-        <div>
-          <h3 className='cart-product-name'>Plain Tea</h3>
-          <div className='cart-buttons'>
-            <button type='button' className='cart-btn'>
-              -
-            </button>
-            <p>1</p>
-            <button type='button' className='cart-btn'>
-              +
-            </button>
+          <div>
+            <h3 className='cart-product-name'>{cartItem.name}</h3>
+            <div className='cart-buttons'>
+              <button type='button' className='cart-btn' onClick={handleDecreaseItemCount}>
+                -
+              </button>
+              <p>{itemCount}</p>
+              <button type='button' className='cart-btn' onClick={handleIncreaseItemCount}>
+                +
+              </button>
+            </div>
           </div>
-        </div>
-        <div className='cart-product-name'>
-          <h3>$ 25</h3>
-        </div>
-      </article>
+          <div className='cart-product-price'>
+            <h3>$ {cartItem.price}</h3>
+          </div>
+        </article>
+      ))}
+
       <section className='amount-container'>
         <article className='total'>
           <h3>Total</h3>

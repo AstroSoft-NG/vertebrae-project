@@ -3,6 +3,8 @@ export interface ProductType {
   image: string;
   name: string;
   price: number;
+  // count: number;
+  // size: string;
 }
 
 export interface FormValuesType {

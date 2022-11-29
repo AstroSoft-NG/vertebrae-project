@@ -10,8 +10,8 @@ import Cart from '../../components/Cart';
 const ProductDetails: React.FC = () => {
   const location = useLocation();
   const { isCartOpen } = useContext(AppContext);
-
-  const { image, name, price } = location.state.product;
+  const product = location.state.product;
+  const { image, name, price } = product;
   return (
     <div>
       <Menu pageTitle='Products' />
@@ -46,7 +46,7 @@ const ProductDetails: React.FC = () => {
               <option value='L'>XXL</option>
             </select>
           </div>
-          <Button text='Add to Cart' product={location.state?.product} />
+          <Button text='Add to Cart' product={product} />
         </article>
       </section>
       <div className='product-details-footer'>
